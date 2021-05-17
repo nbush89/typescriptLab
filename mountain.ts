@@ -18,7 +18,7 @@ let mountains: Mountain[] = [
 //   let variable = findNameOfTallestMountain();
 //   console.log(variable);
 
-  //Products
+//Products
   interface Product {
     name: string;
     price: number;
@@ -29,10 +29,14 @@ let products: Product[] = [
     { name: 'Mittens', price: 12.99 },
   ];
 
-  function calcAverageProductPrice(this: {a: number, b: number}, a: number) {
-    this.a = a;
-    return this;
+  function calcAverageProductPrice(param: Product[]):number{
+    
+    
   }
+
+//   let variable2 = calcAverageProductPrice();
+//   console.log(variable2);
+  
 
   //Inventory
   interface InventoryItem {
@@ -40,20 +44,28 @@ let products: Product[] = [
     quantity: number;
 }
 let inventory: InventoryItem[] = [
-    { product.name: 'motor', product.price: 10.00, quantity: 10 },
-    { product.name: 'sensor', product.price: 12.50, quantity: 4 },
-    { product.name: 'LED', product.price: 1.00, quantity: 20 },
+    {
+        product:{
+            name: 'Motor',
+            price: 10
+        },
+        quantity: 10
+    },
+    {
+        product:{
+            name: 'Sensor',
+            price: 12.5
+        },
+        quantity: 4
+    },
+    {
+        product:{
+            name: 'LED',
+            price: 1
+        },
+        quantity: 20
+    }
   ];
-
-//What needs to be in inventory items array
-//   { 
-//       product:{
-//           name: 'name',
-//           price: 'price'
-
-//       },
-//       quantity: 10
-//   }
 
   function calcInventoryValue(this: {a: number, b: number}, a: number) {
     this.a = a;

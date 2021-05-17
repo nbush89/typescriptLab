@@ -12,23 +12,31 @@ var products = [
     { name: 'Hat', price: 25.99 },
     { name: 'Mittens', price: 12.99 },
 ];
-function calcAverageProductPrice(a) {
-    this.a = a;
-    return this;
+function calcAverageProductPrice(param) {
 }
 var inventory = [
-    { product: product, : .name, 'motor': , product: product, : .price, 10.00: , quantity: 10 },
-    { product: product, : .name, 'sensor': , product: product, : .price, 12.50: , quantity: 4 },
-    { product: product, : .name, 'LED': , product: product, : .price, 1.00: , quantity: 20 },
+    {
+        product: {
+            name: 'Motor',
+            price: 10
+        },
+        quantity: 10
+    },
+    {
+        product: {
+            name: 'Sensor',
+            price: 12.5
+        },
+        quantity: 4
+    },
+    {
+        product: {
+            name: 'LED',
+            price: 1
+        },
+        quantity: 20
+    }
 ];
-//What needs to be in inventory items array
-//   { 
-//       product:{
-//           name: 'name',
-//           price: 'price'
-//       },
-//       quantity: 10
-//   }
 function calcInventoryValue(a) {
     this.a = a;
     return this;
