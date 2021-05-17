@@ -11,18 +11,18 @@ let mountains: Mountain[] = [
   ];
 
 // Close to figuring this one out, I think this code properly finds the tallest mountain, just couldn't get it to print out the name of the tallest mountain
-//   function findNameOfTallestMountain(param: Mountain[]):string{
-//     let maxHeight = param[0].height;
-//     let maxMountainHeight;
-//     param.forEach(element =>{
-//         if(element.height > maxHeight){
-//             maxHeight = element.height;
-//             maxMountainHeight = element;
-//         }
-//   }
-
-// //   let tallestMountain = findNameOfTallestMountain(mountains);
-// //   console.log(tallestMountain);
+  function findNameOfTallestMountain(param: Mountain[]):string{ //just make sure if you set a return type that you have a return statement somewhere in your function
+      //What I would suggest is having one variable to hold the object and then just return the object.name for tallest mountain. 
+    let maxHeight = param[0];
+    param.forEach(element => {
+        if(element.height > maxHeight.height){
+            maxHeight = element;
+        }
+    }) //also, be careful or your bracket/parentheses becasue those can cause very frustrating bugs that are hard to locate. 
+      return maxHeight.name
+  }
+//   let tallestMountain = findNameOfTallestMountain(mountains);
+//   console.log(tallestMountain);
 
 //Products
   interface Product {
@@ -78,12 +78,14 @@ let inventory: InventoryItem[] = [
   ];
 
 //Really close to figuring this one out, I think something is wrong with my syntax in line 83
-//   function calcInventoryValue((param: InventoryItem[]):number{
-//     let totalValue = 0;
-//     for (let i = 0; i < param.length; i++) {
-//         totalValue += parseInt(param.[i].price)*(param[i].quantity);
-//       }
-//   }
+  function calcInventoryValue(param: InventoryItem[]):number{ //you also had an extra ( on this line
+    let totalValue = 0;
+    for (let i = 0; i < param.length; i++) {
+        totalValue += param[i].product.price*param[i].quantity; //parseInt actually takes a string and you already have these values as numbers so you dont need to add this method.
+        //you had some minor syntax errors, you dont need to use a period when calling an index in an array and you hadnt gone into the object far enough on the line above. So close!
+      }
+      return totalValue //youll need to add the return since you stated above that the function should return a number. 
+  }
 
-//   let inventoryValue = calcInventoryValue(inventory);
-//   console.log(inventoryValue);
+  let inventoryValue = calcInventoryValue(inventory);
+  console.log(inventoryValue);
