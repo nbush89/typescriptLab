@@ -42,8 +42,12 @@ var inventory = [
         quantity: 20
     }
 ];
+//Really close to figuring this one out, I think something is wrong with my syntax in line 83
 //   function calcInventoryValue((param: InventoryItem[]):number{
-//     return ;
+//     let totalValue = 0;
+//     for (let i = 0; i < param.length; i++) {
+//         totalValue += parseInt(param.[i].price)*(param[i].quantity);
+//       }
 //   }
-//   let inventoryValue = calcInventoryValue();
+//   let inventoryValue = calcInventoryValue(inventory);
 //   console.log(inventoryValue);
