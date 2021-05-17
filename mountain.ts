@@ -1,22 +1,27 @@
 //Tallest Mountains
 interface Mountain {
     name: string;
-    height: string;
+    height: number;
 }
 
 let mountains: Mountain[] = [
-    { name: 'Kilimanjaro', height: '19341' },
-    { name: 'Everest', height: '29029' },
-    { name: 'Denali', height: '20310' },
+    { name: 'Kilimanjaro', height: 19341 },
+    { name: 'Everest', height: 29029 },
+    { name: 'Denali', height: 20310 },
   ];
 
-  function findNameOfTallestMountain(param: Mountain[]):string{
-    
-    return ''
-  }
+//   function findNameOfTallestMountain(param: Mountain[]):string{
+//     let maxHeight = param[0].height;
+//     let maxMountainHeight;
+//     param.forEach(element =>{
+//         if(element.height > maxHeight){
+//             maxHeight = element.height;
+//             maxMountainHeight = element;
+//         }
+//   }
 
-//   let variable = findNameOfTallestMountain();
-//   console.log(variable);
+// //   let tallestMountain = findNameOfTallestMountain(mountains);
+// //   console.log(tallestMountain);
 
 //Products
   interface Product {
@@ -30,12 +35,16 @@ let products: Product[] = [
   ];
 
   function calcAverageProductPrice(param: Product[]):number{
-    
+    let totalPrice = 0;
+    for(let params of param){
+        totalPrice += params.price;
+    }
+    return totalPrice/param.length;
     
   }
 
-//   let variable2 = calcAverageProductPrice();
-//   console.log(variable2);
+  let averagePrice = calcAverageProductPrice(products);
+  console.log(averagePrice);
   
 
   //Inventory
@@ -67,7 +76,9 @@ let inventory: InventoryItem[] = [
     }
   ];
 
-  function calcInventoryValue(this: {a: number, b: number}, a: number) {
-    this.a = a;
-    return this;
-  }
+//   function calcInventoryValue((param: InventoryItem[]):number{
+//     return ;
+//   }
+
+//   let inventoryValue = calcInventoryValue();
+//   console.log(inventoryValue);
